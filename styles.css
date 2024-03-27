@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    width: 90%;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%; /* Make buttons full width */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.task {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.task-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.task-buttons button {
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none; /* Hide buttons by default */
+}
+
+.task-buttons button:hover {
+    background-color: #e53935;
+}
+
+.task:hover .task-buttons button {
+    display: inline-block; /* Show buttons on hover */
+}
+
+.task-buttons button i {
+    pointer-events: none; /* Ensure the icon does not interfere with button hover */
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+        border-radius: 0;
+    }
+}
